@@ -63,6 +63,8 @@ The model includes RELU layers to introduce nonlinearity, the images are cropped
 
 The data includes multi-camera images and adjusted steering angles. In addition each images is flipped in order help the network generalize better. Also, the data includes several laps of counter-clockwise driving.
 
+In addition, I added a max pooling layer and a dropout layer with a keep probability of 50% after the last 3x3 convolution layer.
+
 The model was tested by running it through the simulator and ensuring that the vehicle could stay on the track.
 
 #### 3. Model parameter tuning
@@ -125,6 +127,6 @@ Furthermore, I simulated the vehicle being in different positions, somewhat furt
 
 After the collection process, I had 11049 number of data points. I finally randomly shuffled the data set and put 20% of the data into a validation set. 
 
-I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was 3. I used an adam optimizer so that manually training the learning rate wasn't necessary.
+I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was 5. I used an adam optimizer so that manually training the learning rate wasn't necessary.
 
 
